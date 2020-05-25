@@ -1,0 +1,11 @@
+package samples
+
+import org.scalatest.funsuite.AnyFunSuite
+
+class SimpleTestSuite extends AnyFunSuite {
+
+  test("This should pass") {
+    assert(true)
+  }
+
+}
