@@ -19,7 +19,9 @@ jobs:
       - name: Prepare mvn configuration
         env:
           MVN_SETTINGS: ${{ secrets.MVN_SETTINGS }}
-        run: chmod +x ./dev/deploy-snapshot.sh
+        run: |
+          echo "$HOME"
+          echo "$MVN_SETTINGS" | base64 -d > "$HOME"/.m2/settings.xml
 
       - name: Run tests
         run: mvn install
