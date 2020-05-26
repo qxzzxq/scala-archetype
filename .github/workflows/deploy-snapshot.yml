@@ -16,14 +16,14 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Prepare mvn configuration
+      - name: Prepare
         env:
           MVN_SETTINGS: ${{ secrets.MVN_SETTINGS }}
         run: |
           echo "$MVN_SETTINGS" | base64 -d > "$HOME"/.m2/settings.xml
 
-      - name: Run tests
-        run: mvn -ntp -B test 
+      - name: Test
+        run: mvn -ntp -B test
 
-      - name: Prepare configuration
+      - name: Deploy
         run: mvn -ntp -B clean deploy -DskipTests -Psnapshot
