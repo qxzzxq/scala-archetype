@@ -1,8 +1,8 @@
 name: Snapshot Deployment
 
 on:
-  push:
-    branches: [ master ]
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -19,11 +19,13 @@ jobs:
       - name: Prepare mvn configuration
         env:
           MVN_SETTINGS: ${{ secrets.MVN_SETTINGS }}
+          GPG_KEY: ${{ secrets.GPG_KEY }}
         run: |
           echo "$MVN_SETTINGS" | base64 -d > "$HOME"/.m2/settings.xml
+          echo "$GPG_KEY" | base64 -d | gpg --import > /dev/null 2>&1
 
       - name: Run tests
-        run: mvn -ntp -B test 
+        run: mvn -ntp -B test
 
       - name: Prepare configuration
-        run: mvn -ntp -B clean deploy -DskipTests -Psnapshot
+        run: mvn -ntp -B clean deploy -DskipTests -Prelease
