@@ -22,7 +22,7 @@ jobs:
           GPG_KEY: ${{ secrets.GPG_KEY }}
         run: |
           echo "$MVN_SETTINGS" | base64 -d > "$HOME"/.m2/settings.xml
-          echo "$GPG_KEY" | base64 -d | gpg --import > /dev/null 2>&1
+          echo "$GPG_KEY" | base64 -d | gpg --import
 
       - name: Test
         run: mvn -ntp -B test
