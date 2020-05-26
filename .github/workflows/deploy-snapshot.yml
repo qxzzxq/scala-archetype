@@ -20,11 +20,11 @@ jobs:
         env:
           MVN_SETTINGS: ${{ secrets.MVN_SETTINGS }}
         run: |
-          echo "$HOME"
           echo "$MVN_SETTINGS" | base64 -d > "$HOME"/.m2/settings.xml
+          chmod +x ./dev/deploy-snapshot.sh
 
       - name: Run tests
-        run: mvn install
+        run: mvn -ntp -B test 
 
       - name: Prepare configuration
-        run: ./dev/deploy-snapshot.sh
+        run: mvn -ntp -B clean deploy -DskipTests -Psnapshot
