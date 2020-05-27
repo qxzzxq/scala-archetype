@@ -16,7 +16,7 @@ An up-to-date Maven Archetype for Scala with a bunch of out-of-the-box features 
 mvn archetype:generate \
   -DarchetypeGroupId=dev.qinx \
   -DarchetypeArtifactId=scala-archetype \
-  -DarchetypeVersion=0.0.1
+  -DarchetypeVersion=1.0.0
 ```
 
 #### Batch mode
@@ -24,7 +24,7 @@ mvn archetype:generate \
 mvn archetype:generate -B \
   -DarchetypeGroupId=dev.qinx \
   -DarchetypeArtifactId=scala-archetype \
-  -DarchetypeVersion=0.0.1 \
+  -DarchetypeVersion=1.0.0 \
   -DgroupId=com.company \
   -DartifactId=artifact-id \
   -Dversion=0.0.1-SNAPSHOT \
