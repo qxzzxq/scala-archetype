@@ -39,6 +39,16 @@
         <java.version>1.8</java.version>
         <scoverage.plugin.version>1.4.0</scoverage.plugin.version>
         <site.plugin.version>3.7.1</site.plugin.version>
+        <scalatest.version>3.1.2</scalatest.version>
+        <scala.maven.plugin.version>4.3.0</scala.maven.plugin.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.javadoc.plugin.version>3.0.1</maven.javadoc.plugin.version>
+        <maven.source.plugin.version>3.1.0</maven.source.plugin.version>
+        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
+        <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
+        <maven.help.plugin.version>3.1.0</maven.help.plugin.version>
+        <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
+        <maven.surefire.plugin.version>2.7</maven.surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -88,7 +98,7 @@
         <dependency>
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_${scala.compat.version}</artifactId>
-            <version>3.1.2</version>
+            <version>${scalatest.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -99,7 +109,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -114,7 +124,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.3.0</version>
+                <version>${scala.maven.plugin.version}</version>
                 <configuration>
                     <args>
                         <arg>-unchecked</arg>
@@ -154,7 +164,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>${maven.javadoc.plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -176,7 +186,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.7</version>
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <skipTests>true</skipTests>
                 </configuration>
@@ -204,7 +214,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
+                <version>${maven.deploy.plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
@@ -212,7 +222,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
+                <version>${nexus.staging.maven.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>default-deploy</id>
@@ -249,7 +259,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-help-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>${maven.help.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>show-profiles</id>
@@ -301,7 +311,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>${maven.gpg.plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>

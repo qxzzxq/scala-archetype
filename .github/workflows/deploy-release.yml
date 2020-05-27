@@ -25,7 +25,7 @@ jobs:
           echo "$GPG_KEY" | base64 -d | gpg --import --batch > /dev/null 2>&1
 
       - name: Test
-        run: mvn -ntp -B test
+        run: mvn -ntp -B integration-test
 
       - name: Deploy
         run: mvn -ntp -B clean deploy -DskipTests -Prelease

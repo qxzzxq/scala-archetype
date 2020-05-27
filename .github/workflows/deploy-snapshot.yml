@@ -23,7 +23,7 @@ jobs:
           echo "$MVN_SETTINGS" | base64 -d > "$HOME"/.m2/settings.xml
 
       - name: Test
-        run: mvn -ntp -B test
+        run: mvn -ntp -B integration-test
 
       - name: Deploy
         run: mvn -ntp -B clean deploy -DskipTests -Psnapshot
