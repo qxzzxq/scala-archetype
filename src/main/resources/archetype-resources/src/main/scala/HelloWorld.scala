@@ -1,7 +1,4 @@
-package ${
-package
-
-}
+package ${package}
 
 /**
  * @author ${user.name}
