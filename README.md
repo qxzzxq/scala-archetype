@@ -1,5 +1,6 @@
 # scala-archetype
 ![build](https://github.com/qxzzxq/scala-archetype/workflows/build/badge.svg)
+[![Maven Central](https://img.shields.io/maven-central/v/dev.qinx/scala-archetype.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.qinx%22%20AND%20a:%22scala-archetype%22)
 
 An up-to-date Maven Archetype for Scala with a bunch of out-of-the-box features 🍻
 
