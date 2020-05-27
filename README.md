@@ -1,4 +1,6 @@
 # scala-archetype
+![build](https://github.com/qxzzxq/scala-archetype/workflows/build/badge.svg)
+
 An up-to-date Maven Archetype for Scala with a bunch of out-of-the-box features 🍻
 
 ## Features
