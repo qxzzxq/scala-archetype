@@ -47,7 +47,7 @@
     </repositories>
 
     <properties>
-        <revision>0.0.2</revision>
+        <revision>1.0.0</revision>
         <changelist>-SNAPSHOT</changelist>
         <mvn.compiler.plugin.version>3.8.1</mvn.compiler.plugin.version>
         <mvn.javadoc.plugin.version>3.0.1</mvn.javadoc.plugin.version>
