@@ -12,12 +12,25 @@
     <description>My wonderfull scala app</description>
     <url>https://github.com/</url>
 
-    <!--Uncomment if you need to deploy the project-->
+    <!--======Uncomment if you need to deploy the project======-->
     <!--<scm>-->
     <!--    <connection></connection>-->
     <!--    <developerConnection></developerConnection>-->
     <!--    <url></url>-->
     <!--</scm>-->
+    <!--<licenses>-->
+    <!--    <license>-->
+    <!--        <name>The Apache License, Version 2.0</name>-->
+    <!--        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>-->
+    <!--    </license>-->
+    <!--</licenses>-->
+    <!--<developers>-->
+    <!--    <developer>-->
+    <!--        <id>id</id>-->
+    <!--        <name>YOUR NAME</name>-->
+    <!--        <email>EMAIL</email>-->
+    <!--    </developer>-->
+    <!--</developers>-->
 
     <repositories>
         <repository>
@@ -40,6 +53,7 @@
         <scoverage.plugin.version>1.4.0</scoverage.plugin.version>
         <site.plugin.version>3.7.1</site.plugin.version>
         <scalatest.version>3.1.2</scalatest.version>
+        <scalatest-maven-plugin>2.0.0</scalatest-maven-plugin>
         <scala.maven.plugin.version>4.3.0</scala.maven.plugin.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.javadoc.plugin.version>3.0.1</maven.javadoc.plugin.version>
@@ -169,7 +183,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>${maven.source.plugin.version}</version>
                 <configuration>
                     <outputDirectory>target</outputDirectory>
                     <attach>true</attach>
@@ -194,7 +208,7 @@
             <plugin>
                 <groupId>org.scalatest</groupId>
                 <artifactId>scalatest-maven-plugin</artifactId>
-                <version>2.0.0</version>
+                <version>${scalatest-maven-plugin}</version>
                 <configuration>
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                     <junitxml>.</junitxml>
