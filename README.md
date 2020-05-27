@@ -3,7 +3,7 @@ An up-to-date Maven Archetype for Scala with a bunch of out-of-the-box features 
 
 ## Features
 - [Scalatest](https://www.scalatest.org/) with [Scoverage](http://scoverage.org/) and [Surefire](https://maven.apache.org/surefire/maven-surefire-plugin/) report
-- Maven central repository deployment
+- [OSSRH](https://central.sonatype.org/pages/ossrh-guide.html) Maven central repository deployment
 - [Apache Spark](https://spark.apache.org/)
 - [Typesasfe config](https://github.com/lightbend/config)
 
@@ -81,5 +81,7 @@ mvn deploy -Psnapshot
 # RELEASE
 mvn deploy -Prelease
 ```
+
+Read the [OSSRH documentation](https://central.sonatype.org/pages/ossrh-guide.html) for more details.
 
 
