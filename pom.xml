@@ -47,7 +47,7 @@
     </repositories>
 
     <properties>
-        <revision>1.0.0</revision>
+        <revision>1.0.1</revision>
         <changelist>-SNAPSHOT</changelist>
         <mvn.compiler.plugin.version>3.8.1</mvn.compiler.plugin.version>
         <mvn.javadoc.plugin.version>3.0.1</mvn.javadoc.plugin.version>
@@ -56,6 +56,8 @@
         <mvn.nexus.staging.plugin.version>1.6.8</mvn.nexus.staging.plugin.version>
         <mvn.help.plugin.version>3.1.0</mvn.help.plugin.version>
         <mvn.gpg.plugin.version>1.6</mvn.gpg.plugin.version>
+        <mvn.resources.plugin.version>3.2.0</mvn.resources.plugin.version>
+        <mvn.archetype.packaging.version>3.2.0</mvn.archetype.packaging.version>
     </properties>
 
     <dependencies>
@@ -66,7 +68,7 @@
             <extension>
                 <groupId>org.apache.maven.archetype</groupId>
                 <artifactId>archetype-packaging</artifactId>
-                <version>3.1.1</version>
+                <version>${mvn.archetype.packaging.version}</version>
             </extension>
         </extensions>
 
@@ -74,7 +76,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-archetype-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>${mvn.archetype.packaging.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -160,6 +162,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${mvn.resources.plugin.version}</version>
+                <configuration>
+                    <addDefaultExcludes>false</addDefaultExcludes>
+                </configuration>
             </plugin>
         </plugins>
 
