@@ -57,7 +57,7 @@
         <mvn.help.plugin.version>3.2.0</mvn.help.plugin.version>
         <mvn.gpg.plugin.version>1.6</mvn.gpg.plugin.version>
         <mvn.resources.plugin.version>3.2.0</mvn.resources.plugin.version>
-        <mvn.archetype.packaging.version>3.2.0</mvn.archetype.packaging.version>
+        <mvn.archetype.packaging.version>3.2.1</mvn.archetype.packaging.version>
     </properties>
 
     <dependencies>
